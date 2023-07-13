@@ -1,53 +1,15 @@
-﻿//Generics
-//We can use one function below, instead of writing three!
-int[] myInt = { 0, 1, 2 };
-string[] myString = { "hello", "there", "mate" };
-double[] myDouble = { 0.1, 0.2, 0.3 };
-
-void PrintLoop<Thing>(Thing[] thing)
+﻿Person bob = new()
 {
-    foreach (Thing t in thing)
-    {
-        Console.WriteLine(t);
-    }
-}
-
-PrintLoop(myInt);
-PrintLoop(myString);
-PrintLoop(myDouble);
-/*
-Person harry = new()
-{
-    Name = "Harry",
-    DateOfBirth = new (year: 2001, month: 3, day: 25)
+    Name = "bob",
+    DateOfBirth = new DateTime(1965, 12, 22)
 };
 
-//non-generic lookup collection
-System.Collections.Hashtable lookupObject = new();
-lookupObject.Add(key: 1, value: "Alpha");
-lookupObject.Add(key: 2, value: "Beta");
-lookupObject.Add(key: 3, value: "Gamma");
-lookupObject.Add(key: harry, value: "Delta");
+bob.Children.Add(new Person { Name = "Alfred" }); //C# 3.0 and later
+bob.Children.Add(new() { Name = "Zoe" }); // C#9.0 and later
 
+Console.WriteLine($"{bob.Name} has {bob.Children.Count} children");
 
-int key = 2; // lookup the value that has 2 as its key
-
-Console.WriteLine(format: "key {0} has value: {1}",
-                    arg0: key,
-                    arg1: lookupObject[key]);
-
-Console.WriteLine(format: "key {0} has value: {1}",
-                    arg0: harry,
-                    arg1: lookupObject[harry]);
-
-public class Person: object
+for(int i = 0; i < bob.Children.Count; i++)
 {
-    public string? Name { get; set; }
-    public DateTime DateOfBirth { get; set; }
-    public List<Person> Children = new();
-    public void WriteToConsole()
-    {
-        Console.WriteLine($"{Name} was born on a {DateOfBirth:dddd}.");
-    }
+    Console.WriteLine($"> {bob.Children[i].Name}");
 }
-*/
