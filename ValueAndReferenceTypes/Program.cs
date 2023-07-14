@@ -106,10 +106,24 @@ ChangeListValue(list);
 Console.WriteLine($"list[0] = {list[0]} (should be 10), proving its a reference type, and doesn't need the ref keyword");
 
 
+Console.WriteLine("-------------");
+Console.WriteLine("Playing with 'out' keyword");
+int result;
+AddTwoNumbers(5, 10, out result);
+Console.WriteLine(result); // Outputs: 15
+
+void AddTwoNumbers(int num1, int num2, out int outVariable)
+{
+    outVariable = num1 + num2;
+}
 
 
-
-
+//FINISH LEARNING OUT
+//FINISH LEARNING OUT
+//FINISH LEARNING OUT
+//FINISH LEARNING OUT
+//FINISH LEARNING OUT
+//FINISH LEARNING OUT
 
 /*
 int defaultIntOld = default(int);  //0
