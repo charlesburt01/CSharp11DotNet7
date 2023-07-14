@@ -11,7 +11,11 @@
     <Compile Remove="Chp6.cs" />
     <Compile Remove="Chp6\Chp6.cs" />
     <Compile Remove="GenericClass.cs" />
+    <Compile Remove="GenericClass_Alt.cs" />
+    <Compile Remove="GenericClass_AltTwoTypes.cs" />
     <Compile Remove="GenericFunctions.cs" />
+    <Compile Remove="InteractExamples\IInteractable.cs" />
+    <Compile Remove="InteractExamples\IInteractor.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +24,11 @@
 
   <ItemGroup>
     <None Include="GenericClass.cs" />
+    <None Include="GenericClass_Alt.cs" />
+    <None Include="GenericClass_AltTwoTypes.cs" />
     <None Include="GenericFunctions.cs" />
+    <None Include="InteractExamples\IInteractable.cs" />
+    <None Include="InteractExamples\IInteractor.cs" />
   </ItemGroup>
 
 </Project>
